@@ -43,7 +43,7 @@
 - (void)layoutSubviews {
     %orig;
     for (UILabel *label in self.subviews) {
-        if ([label.text isEqual:@"Settings"]) {
+        if ([label isKindOfClass:[UILabel class]] && [label.text isEqual:@"Settings"]) {
         label.center = CGPointMake(self.center.x, label.center.y);
         }
     }
